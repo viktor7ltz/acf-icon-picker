@@ -3,11 +3,14 @@
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
+
 if ( ! class_exists( 'acf_field_icon_picker' ) ) :
 
 	class acf_field_icon_picker extends acf_field {
 
 		function __construct( $settings ) {
+
+			include_once ( 'constants.php' );
 
 			$this->name = 'icon-picker';
 
@@ -25,7 +28,7 @@ if ( ! class_exists( 'acf_field_icon_picker' ) ) :
 
 			$this->settings = $settings;
 
-			$this->path_suffix = apply_filters( 'acf_icon_path_suffix', 'assets/img/acf/' );
+			$this->path_suffix = apply_filters( 'acf_icon_path_suffix', ICON_DIR );
 
 			$this->path = apply_filters( 'acf_icon_path', $this->settings['path'] ) . $this->path_suffix;
 

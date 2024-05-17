@@ -10,7 +10,7 @@ if ( ! class_exists( 'acf_field_icon_picker' ) ) :
 
 		function __construct( $settings ) {
 
-			include_once ( 'constants.php' );
+			include_once ( dirname( __DIR__ ) . '/constants.php' );
 
 			$this->name = 'icon-picker';
 

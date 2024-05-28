@@ -15,6 +15,8 @@ GitHub Branch: master
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
+include_once ( 'utils.php' );
+
 if ( ! class_exists( 'acf_plugin_icon_picker' ) ) :
 
 	class acf_plugin_icon_picker {
@@ -36,7 +38,7 @@ if ( ! class_exists( 'acf_plugin_icon_picker' ) ) :
 
 
 		function include_field_types( $version = false ) {
-			include_once( 'fields/acf-icon-picker-v5.php' );
+			include_once ( 'fields/acf-icon-picker-v5.php' );
 		}
 
 	}

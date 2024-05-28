@@ -4,9 +4,9 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 
-if ( ! class_exists( 'acf_field_icon_picker' ) ) :
+if ( ! class_exists( 'acf_field_icon_picker_custom' ) ) :
 
-	class acf_field_icon_picker extends acf_field {
+	class acf_field_icon_picker_custom extends acf_field {
 
 		function __construct( $settings ) {
 
@@ -106,7 +106,7 @@ if ( ! class_exists( 'acf_field_icon_picker' ) ) :
 			wp_enqueue_style( 'acf-input-icon-picker' );
 		}
 	}
-	new acf_field_icon_picker( acf_plugin_icon_picker::$settings );
+	new acf_field_icon_picker_custom( acf_plugin_icon_picker::$settings );
 
 endif;
 
